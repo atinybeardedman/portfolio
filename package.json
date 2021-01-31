@@ -7,8 +7,13 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@fontsource/maven-pro": "^4.1.0",
+    "@fontsource/roboto": "^4.1.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "gridsome-plugin-svg": "0.0.14"
   }
 }

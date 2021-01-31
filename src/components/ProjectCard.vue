@@ -22,7 +22,8 @@ export default {
 
 <style scoped>
 .title {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
+    font-weight:700;
     margin-bottom: 0;
 }
 .button {
@@ -38,8 +39,11 @@ export default {
 .card-text {
     display: flex;
     flex-direction: column;
+    max-width: 66%;
 }
 .description {
     padding: 1em 0;
+    font-family: Maven Pro;
+    font-weight:700;
 }
 </style>

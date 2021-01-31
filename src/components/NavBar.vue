@@ -42,6 +42,8 @@ export default {
         color: white;
         text-decoration: none;
         font-size: 1.5rem;
+        font-family: Maven Pro;
+        font-weight: 400;
     }
     nav {
         display: flex;
@@ -52,6 +54,7 @@ export default {
 
     .nav-container {
         min-height: 30vh;
+        /* max-height: 100vh; */
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
