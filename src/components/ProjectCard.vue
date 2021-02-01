@@ -21,25 +21,24 @@ export default {
 </script>
 
 <style scoped>
+
+article {
+    padding-left: 20%;
+
+}
+
 .title {
     font-size: 2.5vw;
     font-weight:700;
     margin-bottom: 0;
 }
-.button {
-    background: #6923CC;
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    width: 7.5em;
-    text-align: center;
-}
+
 
 .card-text {
     display: flex;
     flex-direction: column;
-    max-width: 66%;
+    align-items: flex-start;
+    max-width: 60%;
 }
 .description {
     padding: 1em 0;

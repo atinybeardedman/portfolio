@@ -28,7 +28,7 @@ export default {
         safeLink(link){
             let safe = link;
             while(safe.includes(" ")){
-                safe = safe.replace(" ", "");
+                safe = safe.replace(" ", "-");
             }
             return safe;
         }

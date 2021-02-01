@@ -16,16 +16,17 @@ query {
 </static-query>
 
 <script>
-import NavBar from "../components/NavBar.vue";
 import HexSvg from '@/assets/hexback.svg'
+import HexFadeSvg from "@/assets/hexback-fade.svg"
+import NavBar from "../components/NavBar.vue";
 export default {
   components: {
     NavBar
   },
- data() {
+  data() {
   return {
     styles: {
-      'background-image': `url(${HexSvg})`
+      'background-image': `url(${HexSvg}), url(${HexFadeSvg})`
     }
   }
    }
@@ -35,26 +36,20 @@ export default {
 <style>
 
 .page-wrapper {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "nav main";
-  height:100vh;
-  overflow: hidden;
-  background-repeat: repeat-y;
-  background-position-x: center;
-  background-size:100% auto;
-  background-position-y: -20vh;
+  background-repeat: no-repeat;
+  background-position: center -20vh, center 80vh;
+  background-size:100% auto, 100% auto;
 }
 
 nav {
-  grid-area: nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
   background: rgba(43, 15, 82, .8);
 }
 main {
-  grid-area: main;
-  overflow-y: auto;
-  /* min-height:200vh; */
+ padding-left: 200px;
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <Layout>
-    <section class="hero">
-      <div class="hero-content">
+      <Hero>
         <h3 class="name">Sean Dickinson</h3>
         <h1 class="headline">Digital Solutions Builder</h1>
         <div class="description">
@@ -10,8 +9,7 @@
           praesentium vero similique aliquid nihil. Natus perspiciatis qui
           delectus esse voluptatem.
         </div>
-      </div>
-    </section>
+      </Hero>
     <section id="projects">
       <ProjectCard v-for="edge in $page.projects.edges" 
       :key="edge.node.id"
@@ -43,27 +41,21 @@
 
 <script>
 import ProjectCard from "../components/ProjectCard.vue";
+import Hero from "../components/Hero.vue"
+
 export default {
   metaInfo: {
     title: "Sean Dickinson Portfolio",
   },
   components: {
     ProjectCard,
+    Hero
   },
 };
 </script>
 
 <style>
-.hero {
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-.hero-content {
-  text-align: center;
-}
+
 
 .name {
   font-size: 2vw;
@@ -81,15 +73,7 @@ export default {
 }
 
 .description {
-  padding: 0 25%;
   text-align: left;
-}
-
-#projects {
-  display: flex;
-  flex-direction: column;
-  max-width: 60vw;
-  margin: 0 auto;
 }
 
 footer {
