@@ -13,7 +13,7 @@ module.exports = {
         baseDir: "./content/projects",
         path: "*.md",
         typeName: "Project",
-        pathPrefix: '/projects',
+        pathPrefix: '/solutions',
         refs: {
           tags: {
             typeName: "Tag",
@@ -53,7 +53,7 @@ module.exports = {
   templates: {
     Project: [
       {
-        path: "/projects/:title",
+        path: "/solutions/:title",
         component: "~/templates/Project.vue",
       },
     ],
