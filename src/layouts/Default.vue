@@ -41,14 +41,7 @@ export default {
   background-size:100% auto, 100% auto;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 200px;
-  background: rgba(43, 15, 82, .8);
-}
+
 main {
  padding-left: 200px;
 }
