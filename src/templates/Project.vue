@@ -3,14 +3,23 @@
     <article class="project-detail">
       <section class="section">
         <div class="container">
-          <h1 class="title">{{$page.project.title}}</h1>
+          <h1 class="title">{{ $page.project.title }}</h1>
+          <div class="links">
+            <a :href="$page.project.demo" class="button" target="_blank"
+              >Live Demo</a
+            >
+            <a :href="$page.project.repo" class="button" target="_blank"
+              >View Code</a
+            >
+          </div>
           <div class="content">
             <div v-html="$page.project.content"></div>
           </div>
-          <div class="links">
-            <a :href="$page.project.demo" class="button" target="_blank">Live Demo</a>
-            <a :href="$page.project.repo" class="button" target="_blank">View Code</a>
-          </div>
+        <h2>Screenshots</h2>
+        <div class="image-container">
+          <g-image :src="$page.project.screenshot1" fit="inside" />
+          <g-image :src="$page.project.screenshot2" fit="inside" />
+        </div>
         </div>
       </section>
     </article>
@@ -27,6 +36,8 @@
      content
      demo
      repo
+     screenshot1 (width: 533, height: 300, quality: 90)
+     screenshot2 (width: 533, height: 300, quality: 90)
      tags {
        id
      }
@@ -43,9 +54,9 @@
   padding: 2rem 5rem;
 }
 .title {
-   font-size: 2vw;
-  font-weight:500;
-  margin: 0.5em 0
+  font-size: 2vw;
+  font-weight: 500;
+  margin: 0.5em 0;
 }
 .links {
   padding: 2rem 0;
@@ -53,5 +64,10 @@
 
 .links a {
   margin-right: 1em;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>

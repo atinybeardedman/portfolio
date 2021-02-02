@@ -13,7 +13,7 @@ module.exports = {
         baseDir: "./content/projects",
         path: "*.md",
         typeName: "Project",
-        pathPrefix: '/solutions',
+        pathPrefix: '/Solutions',
         refs: {
           tags: {
             typeName: "Tag",
