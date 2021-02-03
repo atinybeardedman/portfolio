@@ -17,7 +17,7 @@
           </div>
         <h2>Screenshots</h2>
         <div class="image-container">
-          <g-image :src="$page.project.screenshot1" fit="inside" />
+          <g-image :src="$page.project.screenshot1" width="500" height="300" fit="inside"/>
           <g-image :src="$page.project.screenshot2" fit="inside" />
         </div>
         </div>
@@ -45,6 +45,7 @@
     }
   }
 </page-query>
+
 
 <style scoped>
 .project-detail {

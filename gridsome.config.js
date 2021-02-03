@@ -11,7 +11,7 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         baseDir: "./content/projects",
-        path: "*.md",
+        path: "**/*.md",
         typeName: "Project",
         pathPrefix: '/Solutions',
         refs: {
