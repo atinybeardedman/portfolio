@@ -15,11 +15,13 @@
           <div class="content">
             <div v-html="$page.project.content"></div>
           </div>
-        <h2>Screenshots</h2>
-        <div class="image-container">
-          <g-image :src="$page.project.screenshot1" width="500" height="300" fit="inside"/>
-          <g-image :src="$page.project.screenshot2" fit="inside" />
-        </div>
+          <h2>Screenshots</h2>
+          <div class="image-container">
+            <g-image :src="$page.project.screenshot1" />
+            <g-image :src="$page.project.screenshot2" />
+          </div>
+          
+         
         </div>
       </section>
     </article>
@@ -36,8 +38,8 @@
      content
      demo
      repo
-     screenshot1 (width: 533, height: 300, quality: 90)
-     screenshot2 (width: 533, height: 300, quality: 90)
+     screenshot1 (width: 1000, quality: 100)
+     screenshot2 (width: 1000, quality: 100)
      tags {
        id
      }
@@ -45,6 +47,7 @@
     }
   }
 </page-query>
+
 
 
 <style scoped>
@@ -70,5 +73,19 @@
 .image-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  width: 45vw;
+  padding: 1em;
+}
+
+@media screen and (max-width:600px) {
+
+ .image-container img {
+  width: 90vw;
+}
+
 }
 </style>
