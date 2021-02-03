@@ -19,9 +19,9 @@
     <transition name="menu">
         <div v-if="showSub" class="child-menu nav-container">
         <div>
-            <h3 class="subtitle">{{this.subTitle}}</h3>
-            <div v-for="(link, index) of subMenuItems" :key="index" class="nav-link-container child-link">
-                <g-link :to="getSubLink(link)">{{link}}</g-link>
+            <!-- <h3 class="subtitle">{{this.subTitle}}</h3> -->
+            <div v-for="{node} of $static.projects.edges" :key="node.id" class="nav-link-container child-link">
+                <g-link :to="node.path">{{node.title}}</g-link>
             </div>
         </div>
         </div>
@@ -29,6 +29,20 @@
     </transition>
   </nav>
 </template>
+
+<static-query>
+query {
+  projects: allProject(sortBy: "order", order: ASC) {
+    edges {
+      node {
+        id
+        title
+        path
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
@@ -39,14 +53,6 @@ export default {
         {
           link: "Solutions",
           showSubmenu: true,
-          subTitle: 'Education',
-          subItems: [
-            "Student Info System",
-            "Attendance",
-            "Res Life",
-            "Vehicle Signout",
-            "Student Bank",
-          ],
         },
         { link: "Resume" },
         { link: "About Me" },
@@ -141,6 +147,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index:2;
 }
 
 .child-menu {
@@ -150,7 +157,8 @@ nav {
   left: 200px;
   top: 0px;
   background: rgba(7, 13, 51, 0.8);
-  transition: left 0.25s, opacity 0.15s 0.1s, visibility 0s;
+  transition: width 0.25s, opacity 0.15s 0.1s, visibility 0s;
+  z-index:0;
 }
 
 .child-link {
@@ -162,14 +170,14 @@ nav {
 }
 
 .menu-enter, .menu-leave-to {
-  left: 0px;
+  width: 0px;
   opacity: 0;
   visibility: hidden;
-  transition: left 0.25s, opacity 0.15s, visibility 0s 0.25s;
+  transition: width 0.25s, opacity 0.15s, visibility 0s 0.25s;
 }
 
 .child-menu div {
-  width: 100%;
+  width: 200px;
 }
 
 .subtitle {

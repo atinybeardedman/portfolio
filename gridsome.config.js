@@ -31,12 +31,7 @@ module.exports = {
         {
           removeTitle: false
         },
-        {
-          prefixIds: {
-            prefix: (_, {path}) => basename(path, '.svg'),
-            delim: '-',
-          },
-        },
+       
         {
           removeDesc: false
         },

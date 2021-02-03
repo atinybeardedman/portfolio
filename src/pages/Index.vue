@@ -22,13 +22,14 @@
 
 <page-query>
   query {
-    projects: allProject {
+    projects: allProject(sortBy: "order", order: ASC) {
       edges {
         node {
           id
           title
           path
           excerpt
+          svg
           tags {
             id
             path
