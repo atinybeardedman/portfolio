@@ -20,6 +20,7 @@ This project provides a simulation for creating string art using modular arithma
 
 ## Tech Stack
 - VueJS (Typescript)
+- HTML Canvas
 - Buefy (Responsive Design Components)
 - HTML Canvas for Rendering
 - Firebase Hosting
