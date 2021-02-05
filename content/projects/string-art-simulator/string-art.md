@@ -6,7 +6,7 @@ demo: https://string-art-simulator.firebaseapp.com/
 repo: https://github.com/atinybeardedman/string-art-simulator
 screenshot1: ./screenshot-1.png
 screenshot2: ./screenshot-2.png
-svg: string
+icon: fab,connectdevelop
 order: 2
 ---
 # Description

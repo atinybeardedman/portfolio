@@ -6,7 +6,7 @@ demo: https://grid-maker-1a221.firebaseapp.com
 repo: https://github.com/atinybeardedman/grid-maker
 screenshot1: ./screenshot-1.png
 screenshot2: ./screenshot-2.png
-svg: graph
+icon: fas,th
 order: 3
 ---
 # Description

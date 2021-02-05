@@ -29,7 +29,7 @@
           title
           path
           excerpt
-          svg
+          icon
           tags {
             id
             path

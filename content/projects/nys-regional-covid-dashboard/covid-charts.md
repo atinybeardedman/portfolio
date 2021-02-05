@@ -6,7 +6,7 @@ demo: https://covid.seandickinson.dev
 repo: https://github.com/atinybeardedman/covid-charts
 screenshot1: ./screenshot-1.png
 screenshot2: ./screenshot-2.png
-svg: graph
+icon: far,chart-bar
 order: 1
 ---
 # Description

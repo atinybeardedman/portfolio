@@ -7,21 +7,21 @@
         </div>
         <g-link :to="path" class="button">Learn More</g-link>
       </div>
-      <div class="card-image" :style="{'clip-path': `url(#${svg}-svg)`}">
+      <div class="card-image">
+          <font-awesome-icon :icon="iconName" size="6x"></font-awesome-icon>
       </div>
-      <component :is="dynamicSvg" height="0" width="0"></component>
   </article>
 </template>
 
 <script>
 export default {
     name: 'ProjectCard',
-    props: ['title', 'excerpt', 'path', 'svg'],
-   computed: {
-       dynamicSvg(){
-           return () => import(`@/assets/${this.svg}.svg?inline`)
-       }
-   }
+    props: ['title', 'excerpt', 'path', 'icon'],
+    computed: {
+        iconName(){
+            return this.icon.split(',')
+        }
+    }
 }
 </script>
 
@@ -54,8 +54,10 @@ article:nth-child(even){
 }
 
 .card-image {
-    background: linear-gradient(to right, #ba59a6 0%, #69aed8 50%, #1c12a8 100%);
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 .description {
     padding: 1em 0;

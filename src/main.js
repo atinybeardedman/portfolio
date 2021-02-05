@@ -6,8 +6,18 @@ import "@fontsource/maven-pro/500.css";
 import "@fontsource/maven-pro/700.css";
 import '~/assets/styles.css'
 import DefaultLayout from '~/layouts/Default.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faConnectdevelop } from '@fortawesome/free-brands-svg-icons'
+import { faChartBar } from '@fortawesome/free-regular-svg-icons'
+import { faTh} from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false;
+library.add(faGithub, faChartBar, faConnectdevelop, faTh)
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
 }
