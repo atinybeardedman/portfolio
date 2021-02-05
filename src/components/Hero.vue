@@ -17,6 +17,6 @@
 
 .hero-content {
   text-align: center;
-  padding: 0 20%;
+  padding: 0 clamp(5em, 20%,15em)
 }
 </style>

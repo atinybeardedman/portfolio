@@ -39,7 +39,7 @@ article:nth-child(even){
 }
 
 .title {
-    font-size: 2.5vw;
+    font-size: clamp(1em, 1em + 1.5vw, 2em);
     font-weight:700;
     margin: 0;
 }
@@ -60,7 +60,7 @@ article:nth-child(even){
 .description {
     padding: 1em 0;
     font-family: Maven Pro;
-    font-weight:700;
+    font-weight:500;
 }
 
 svg {

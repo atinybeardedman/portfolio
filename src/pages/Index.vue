@@ -59,12 +59,12 @@ export default {
 
 
 .name {
-  font-size: 2vw;
+  font-size: clamp(1em, 1em + 1.5vw, 2em);
   font-weight:500;
   margin: 0.5em 0
 }
 .headline {
-  font-size: 4.5vw;
+  font-size: clamp(1em, 2em + 2.5vw, 5em);
   font-weight:700;
   margin: 0.25em 0;
    background: -webkit-linear-gradient(45deg,#EF4DEE, #9D4EFC);

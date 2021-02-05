@@ -1,6 +1,11 @@
 <template>
   <nav @mouseleave="handleHover(false)">
-    <div class="root-menu">
+    <button class="nav-button" @click="openMenu" :class="{opened}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="root-menu" :class="{opened}">
       <div class="nav-container">
         <div class="nav-link-container">
           <g-link to="/">Home</g-link>
@@ -60,6 +65,7 @@ export default {
       ],
       showSub: false,
       currentIndex: 0,
+      opened: false
     };
   },
   methods: {
@@ -76,6 +82,9 @@ export default {
     },
     getSubLink(link){
         return `/${this.subPath}/${this.safeLink(link)}`
+    },
+    openMenu(){
+      this.opened = !this.opened;
     }
   },
   computed: {
@@ -192,5 +201,80 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.nav-button {
+  position: fixed;
+  top: 1rem;
+  left:1rem;
+  background: none;
+  outline: none;
+  border:none;
+  display: none;
+  visibility: hidden;
+}
+
+.nav-button span
+{
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: center center;
+  
+  transition: transform 0.5s,
+              opacity 0.55s ease;
+}
+
+
+
+.nav-button.opened span
+{
+  opacity: 1;
+}
+
+.nav-button.opened span:first-child {
+  transform: translateY(9px) rotate(45deg)
+}
+
+
+.nav-button.opened span:nth-child(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.nav-button.opened span:last-child
+{
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px){
+  .nav-button {
+    display: block;
+    visibility: visible;
+  }
+
+  .root-menu {
+    visibility: hidden;
+    background: rgba(43, 15, 82, 0.9);
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.5s,width 0.3s, visibility 0s 0.5s;
+  }
+
+  .root-menu.opened {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, width 0.3s;
+    width: 100vw;
+  }
 }
 </style>

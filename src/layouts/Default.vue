@@ -45,4 +45,10 @@ export default {
 main {
  padding-left: 200px;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-left: 0;
+  }
+}
 </style>
