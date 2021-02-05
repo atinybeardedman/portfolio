@@ -77,14 +77,14 @@
 }
 
 .image-container img {
-  width: 45vw;
+  width: 45%;
   padding: 1em;
 }
 
 @media screen and (max-width:600px) {
 
  .image-container img {
-  width: 90vw;
+  width: 90%;
 }
 
 }
