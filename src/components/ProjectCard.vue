@@ -29,7 +29,8 @@ export default {
 
 article {
     margin-bottom: 5em;
-    padding: 0 20%;
+    max-width: 800px;
+    width: 90vw;
     display:flex;
     align-items: stretch;
 }
@@ -38,10 +39,8 @@ article:nth-child(even){
     flex-direction: row-reverse;
 }
 
-.title {
-    font-size: clamp(1em, 1em + 1.5vw, 2em);
-    font-weight:700;
-    margin: 0;
+article:nth-child(even) .card-image{
+    justify-content: flex-start;
 }
 
 
@@ -50,14 +49,14 @@ article:nth-child(even){
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 60%;
+    padding: 0 1em;
 }
 
 .card-image {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 40%;
+    flex: 1 0 7.5em
 }
 .description {
     padding: 1em 0;

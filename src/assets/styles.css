@@ -27,6 +27,22 @@
       font-weight: 500;
   }
 
+  .title {
+    font-size: clamp(1em, 1em + 1.5vw, 2em);
+    font-weight:700;
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6923CC;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: white;
+}
+
 
 
 /* CSS Only Components */
@@ -37,6 +53,12 @@
     padding: 0.5em 1em;
     border-radius: 4px;
     text-align: center;
+    transition: color 0.5s, background 0.5s;
+}
+
+.button:hover {
+  background: #fff;
+  color: #6923CC;
 }
 
 .section {

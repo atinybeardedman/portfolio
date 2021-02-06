@@ -80,4 +80,11 @@ export default {
 footer {
   padding-top: 10vh;
 }
+
+#projects {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>
