@@ -54,14 +54,7 @@
 .project-detail {
   min-height: 100vh;
 }
-.container {
-  padding: 2rem 5rem;
-}
-.title {
-  font-size: 2vw;
-  font-weight: 500;
-  margin: 0.5em 0;
-}
+
 .links {
   padding: 2rem 0;
 }
