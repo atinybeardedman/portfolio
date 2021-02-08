@@ -37,6 +37,26 @@
   padding: 2rem 5rem;
 }
 
+/* Utility Helpers */
+
+.flex {
+  display: flex;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-centered {
+  text-align: center;
+}
+
 /* Link Styles */
 
 a {
