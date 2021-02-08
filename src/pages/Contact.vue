@@ -1,13 +1,22 @@
 <template>
   <Layout>
-    <section class="full-height">
+    <section class="full-height flex-center-all">
       <div class="container">
-          <h2>Contact Me</h2>
+          <h2 class="title text-centered">Contact Me</h2>
+          <div class="container flex space-evenly">
+                  <a v-for="(hex, index) in hexagons" :key="index" target="_blank" :href="hex.href">
+                    <Hexagon  :styles="hexStyles" :border="hexBorder">
+                      <font-awesome-icon :icon="hex.icon" size="2x"></font-awesome-icon>
+                    </Hexagon>
+                  </a>
+          </div>
         <form @submit.prevent="submitForm($event)" method="post" netlify v-if="!submitted">
           <div class="input-wrapper" v-for="(field, index) in fields" :key="index">
-            <label :for="field.name">{{field.name}}</label>
-            <input v-if="field.tag === 'input'" v-model="fields[index].value" :class="{error: field.hasError}" :type="field.type" :name="field.name" :id="field.name">
-            <textarea v-else v-model="fields[index].value" :class="{error: field.hasError}" :type="field.type" :name="field.name" :id="field.name"></textarea>
+            <label :for="field.name" class="flex-center-all">
+                <font-awesome-icon :icon="field.icon"></font-awesome-icon>
+            </label>
+            <input v-if="field.tag === 'input'" :placeholder="field.name" v-model="fields[index].value" :class="{error: field.hasError}" :type="field.type" :name="field.name" :id="field.name">
+            <textarea v-else v-model="fields[index].value" :placeholder="field.name" :class="{error: field.hasError}" :type="field.type" :name="field.name" :id="field.name"></textarea>
           </div>
          
           <button class="button" type="submit" :disabled="loading">Submit</button>
@@ -21,12 +30,17 @@
 </template>
 
 <script>
+import Hexagon from '~/components/Hexagon.vue';
 export default {
+    components: {
+        Hexagon
+    },
   data(){
       return {
           fields: [
               {
-                  name: 'name',
+                  name: 'Name',
+                  icon: ['far', 'user'],
                   value: null,
                   tag: 'input',
                   type:"text",
@@ -34,15 +48,8 @@ export default {
                   validators: [this.required]
               },
               {
-                  name: 'subject',
-                  value: null,
-                  tag: 'input',
-                  type: 'text',
-                  hasError: false,
-                  validators: [this.required]
-              },
-              {
-                  name: 'email',
+                  name: 'Email',
+                  icon: ['far','envelope'],
                   value: null,
                   tag: 'input',
                   type: 'email',
@@ -50,7 +57,8 @@ export default {
                   validators: [this.required, this.validateEmail]
               },
               {
-                  name: 'message',
+                  name: 'Message',
+                  icon: ['far','comment'],
                   value: null,
                   tag: 'textarea',
                   hasError: false,
@@ -59,7 +67,33 @@ export default {
 
           ],
           loading: false,
-          submitted: false
+          submitted: false,
+          hexStyles: {
+                      color: 'white',
+                      background: '#6923CC',
+                      width: 100,
+                      height: 100
+                  },
+          hexBorder: {
+              size: 2,
+              color: 'white'
+          },
+          hexagons: [
+              {
+                  icon: ['fab','github'],
+                  href: 'https://github.com/atinybeardedman'
+              },
+              {
+                  icon: ['fab','linkedin'],
+                  href: 'https://www.linkedin.com/in/sean-dickinson-3a32a295/'
+              },
+              {
+                  icon: ['far','envelope'],
+                  href: 'mailto:contact@seandickinson.dev'
+              }
+          ]
+              
+          
       }
   },
   methods: {
@@ -98,9 +132,6 @@ export default {
 
 <style scoped>
 
-section {
-    padding: 2em 20%;
-}
 
 form{
     width: 90vw;
@@ -109,29 +140,38 @@ form{
 .input-wrapper {
     width: 100%;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 1rem;
 }
 
 label {
-    flex: 0 1 25%;
+    flex: 0 1 3em;
     padding: 0.5em 1em;
     font-family: Maven Pro;
     font-weight: 500;
     text-transform: capitalize;
+    background: #6923CC;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
-textarea {
-    padding: 0.5em 1em;
-}
 
 input, textarea {
     flex: 1 0 75%;
     outline:none;
     font-size: 1rem;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     padding: 0 1rem;
     font-family: Roboto;
+    border: none;
+}
+
+textarea {
+    padding: 1em;
+    resize: none;
+    overflow: hidden;
+    height:5em;
 }
 
 input.error, textarea.error {
