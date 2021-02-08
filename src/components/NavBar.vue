@@ -20,6 +20,7 @@
           <g-link :to="'/' + safeLink(link.link)">{{ link.link }}</g-link>
         </div>
       </div>
+      <!-- Add icon links for github, etc -->
     </div>
     <transition name="menu">
         <div v-if="showSub" class="child-menu nav-container">

@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <section>
+    <section class="full-height">
       <h1 class="title">About Me</h1>
+      <!-- Hexagon picture on left, blurb on left (2-3 sentences, bump up font size) -->
+      <!-- More personalized, pop up system for "Find out more" -->
       <article>
         <h2>My Background</h2>
         <div>
@@ -13,7 +15,7 @@
           has applied to my teaching career, my work as a technology
           coordinator, as well as my web application development. I am currently
           creating applications using technologies such as Vue.js, Typescript,
-          Angular, and static site generation,
+          Angular, and static site generation.
         </div>
       </article>
       <article>
