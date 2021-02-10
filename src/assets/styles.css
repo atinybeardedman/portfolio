@@ -53,6 +53,14 @@
   justify-content: center;
 }
 
+.flex-center-main {
+  justify-content: center;
+}
+
+.flex-center-cross {
+  align-items: center;
+}
+
 .text-centered {
   text-align: center;
 }

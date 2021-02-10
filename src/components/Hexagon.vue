@@ -1,9 +1,7 @@
 <template>
     <div class="hex hexagon-container" :style="containerStyles">
         <div class="hex hexagon-content flex-center-all" :style="contentStyles">
-            <div>
                 <slot></slot>
-            </div>
         </div>
     </div>
 </template>
@@ -15,11 +13,10 @@ export default {
     props: ['styles', 'border'],
     computed: {
         contentStyles(){
+            // TODO: do this with css variables maybe
             const styles =  {...this.styles, position: 'absolute'};
-            styles.height -= this.border.size * 2;
-            styles.height += 'px';
-            styles.width -= this.border.size * 2;
-            styles.width += 'px';
+            styles.height = `calc(${styles.height} - ${this.border.size * 2}px)`;
+            styles.width = `calc(${styles.width} - ${this.border.size * 2}px)`;
             styles.top = this.border.size + 'px';
             styles.left = this.border.size + 'px';
             return styles;
@@ -28,8 +25,6 @@ export default {
             const styles = {...this.styles, position: 'relative'};
             styles.color = styles.background;
             styles.background = this.border.color;
-            styles.height += 'px';
-            styles.width += 'px';
             return styles;
         }
     }
