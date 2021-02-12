@@ -1,6 +1,6 @@
 <template>
     <div class="hex hexagon-container" :style="containerStyles">
-        <div class="hex hexagon-content flex-center-all" :style="contentStyles">
+        <div class="hex hexagon-content flex-center-all">
                 <slot></slot>
         </div>
     </div>
@@ -10,21 +10,16 @@
 
 <script>
 export default {
-    props: ['styles', 'border'],
+    props: ['styles', 'border', 'sizes'],
     computed: {
-        contentStyles(){
-            // TODO: do this with css variables maybe
-            const styles =  {...this.styles, position: 'absolute'};
-            styles.height = `calc(${styles.height} - ${this.border.size * 2}px)`;
-            styles.width = `calc(${styles.width} - ${this.border.size * 2}px)`;
-            styles.top = this.border.size + 'px';
-            styles.left = this.border.size + 'px';
-            return styles;
-        },
         containerStyles(){
-            const styles = {...this.styles, position: 'relative'};
-            styles.color = styles.background;
-            styles.background = this.border.color;
+            const styles = {};
+            styles['--hexagonSize'] = this.sizes.default;
+            styles['--hexagonMobileSize'] = this.sizes.mobile;
+            styles['--borderSize'] = this.border.size;
+            styles['--hexColor'] = this.styles.background;
+            styles['--fontColor'] = this.styles.color;
+            styles['--borderColor'] = this.border.color;
             return styles;
         }
     }
@@ -38,13 +33,35 @@ export default {
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }
 
+.hexagon-container {
+    position:relative;
+    background: var(--borderColor);
+    width: var(--hexagonSize);
+    height: var(--hexagonSize);
+    background: var(--borderColor);
+}
+
 .hexagon-content {
     transition: color 0.5s, background-color 0.5s;
+    height: calc(var(--hexagonSize) - calc(var(--borderSize) * 2));
+    width: calc(var(--hexagonSize) - calc(var(--borderSize) * 2));
+    top: var(--borderSize);
+    left: var(--borderSize);
+    background: var(--hexColor);
+    color: var(--fontColor);
+    position: absolute;
 }
 
 
 .hexagon-content:hover {
     background: inherit !important;
     color: inherit !important;
+}
+
+@media screen and (max-width: 600px){
+    .hexagon-container {
+        --hexagonSize: var(--hexagonMobileSize) !important;
+        
+    }
 }
 </style>
