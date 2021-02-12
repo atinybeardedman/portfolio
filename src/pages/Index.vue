@@ -15,7 +15,10 @@
       :key="edge.node.id"
       v-bind="edge.node" />
     </section>
-    <footer>
+    <footer class="text-centered">
+      <small>
+        &copy; Sean Dickinson 2021
+      </small>
     </footer>
   </Layout>
 </template>
@@ -86,5 +89,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -10vh;
 }
 </style>

@@ -1,20 +1,16 @@
 <template>
 <transition name="fade">
     <div @click="close" class="modal flex-center-all" v-show="show">
-        <button @click.stop.prevent="close" class="close-button">
-            <span></span><span></span>
-        </button>
-        <div class="container">
+       <transition name="scale">
+        <div @click.stop class="container modal-container" v-show="show">
             <header>
                 <slot name="header"></slot>
             </header>
             <div class="modal-content">
                 <slot></slot>
             </div>
-            <footer>
-                <slot name="footer"></slot>
-            </footer>
         </div>
+       </transition>
     </div>
 </transition>
 </template>
@@ -45,6 +41,14 @@ export default {
     opacity: 0;
 }
 
+.scale-enter-active, .scale-leave-active {
+  transition: transform .3s;
+}
+
+.scale-enter, .scale-leave-to {
+    transform: scale(0.2);
+}
+
 .modal {
     width: 100vw;
     height: 100vh;
@@ -52,6 +56,15 @@ export default {
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.7);
+    z-index:2;
+}
+
+.modal-container {
+    min-width: 50vw;
+    max-width: 90vw;
+    background: #eee;
+    color: #6923CC;
+    border-radius: 4px;
 }
 
 .close-button{

@@ -4,7 +4,7 @@
       <section class="section">
         <div class="container">
           <h1 class="title">{{ $page.project.title }}</h1>
-          <div class="links">
+          <div class="links flex flex-space-evenly">
             <a :href="$page.project.demo" class="button" target="_blank"
               >Live Demo</a
             >

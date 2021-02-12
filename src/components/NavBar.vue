@@ -86,6 +86,7 @@ export default {
     },
     openMenu(){
       this.opened = !this.opened;
+      this.$emit('menuOpened', this.opened);
     }
   },
   computed: {
@@ -148,6 +149,7 @@ nav {
   top: 0;
   left: 0;
   height: 100vh;
+  z-index:1;
 }
 
 .root-menu {

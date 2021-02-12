@@ -30,7 +30,7 @@ export default {
 article {
     margin-bottom: 5em;
     max-width: 800px;
-    width: 90vw;
+    width: 90%;
     display:flex;
     align-items: stretch;
 }
@@ -64,7 +64,15 @@ article:nth-child(even) .card-image{
     font-weight:500;
 }
 
-svg {
-    position: absolute;
+@media screen and (max-width:600px){
+    article, article:nth-child(even) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    article .card-image, article:nth-child(even) .card-image{
+        order: -1;
+        justify-content: center;
+    }
 }
 </style>

@@ -21,6 +21,11 @@
 
   h1 {
       font-weight: 700;
+      font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
   }
 
   h2, h3 {
@@ -35,6 +40,20 @@
 
 .container {
   padding: 2rem 5rem;
+}
+
+.section {
+  padding: 5rem;
+}
+
+@media screen and (max-width: 600px){
+  .container {
+    padding: 2rem 2rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
 }
 
 /* Utility Helpers */
@@ -83,6 +102,10 @@ a:hover {
   min-height: 100vh;
 }
 
+.noScroll {
+  overflow:hidden;
+}
+
 
 /* CSS Only Components */
   .button {
@@ -95,14 +118,11 @@ a:hover {
     outline: none;
     text-align: center;
     transition: color 0.5s, background 0.5s;
+    font: inherit;
 }
 
 .button:hover {
   background: #fff;
   color: #6923CC;
   cursor: pointer;
-}
-
-.section {
-    padding: 5rem;
 }

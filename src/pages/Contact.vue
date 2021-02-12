@@ -10,7 +10,7 @@
             target="_blank"
             :href="hex.href"
           >
-            <Hexagon :styles="hexStyles" :border="hexBorder">
+            <Hexagon :styles="hexStyles" :border="hexBorder" :sizes="hexSizes">
               <font-awesome-icon :icon="hex.icon" size="2x"></font-awesome-icon>
             </Hexagon>
           </a>
@@ -100,12 +100,14 @@ export default {
       hexStyles: {
         color: "white",
         background: "#6923CC",
-        width: "100px",
-        height: "100px",
       },
       hexBorder: {
-        size: 2,
+        size: '2px',
         color: "white",
+      },
+      hexSizes: {
+          default: '100px',
+          mobile: '75px'
       },
       hexagons: [
         {

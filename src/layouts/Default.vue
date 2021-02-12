@@ -1,6 +1,6 @@
 <template>
- <div class="page-wrapper" :style="styles">
-   <NavBar />
+ <div class="page-wrapper" :style="styles" :class="{noScroll: isMenuOpen}">
+   <NavBar @menuOpened="isMenuOpen = $event" />
    <main>
       <slot/>
    </main>
@@ -27,8 +27,16 @@ export default {
   return {
     styles: {
       'background-image': `url(${HexSvg}), url(${HexFadeSvg})`
-    }
+    },
+    isMenuOpen: false
   }
+   },
+   metaInfo(){
+     return {
+       bodyAttrs: {
+         class: this.isMenuOpen ? 'noScroll' : ''
+       }
+     }
    }
 }
 </script>
