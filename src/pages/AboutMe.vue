@@ -17,21 +17,26 @@
             code. I am currently creating applications using technologies such as
             Vue.js, Typescript, Angular, and static site generation.
           </div>
-          <button class="button">Learn More</button>
+          <button @click="showModal = true" class="button">Learn More</button>
         </div>
       </article>
     </section>
+    <Modal :show.sync = "showModal">
+      I'm a modal
+    </Modal>
   </Layout>
 </template>
 
 <script>
 import Hexagon from "../components/Hexagon.vue";
+import Modal from "@/components/Modal.vue";
 export default {
   metaInfo: {
     title: "About Me",
   },
   components: {
     Hexagon,
+    Modal
   },
   data() {
     return {
@@ -45,6 +50,7 @@ export default {
         size: 2,
         color: "white",
       },
+      showModal: false
     };
   },
 };
