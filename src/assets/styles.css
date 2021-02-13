@@ -62,8 +62,24 @@
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .space-evenly {
   justify-content: space-evenly;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .flex-center-all {
@@ -76,7 +92,7 @@
   justify-content: center;
 }
 
-.flex-center-cross {
+.align-items-center {
   align-items: center;
 }
 
@@ -125,4 +141,8 @@ a:hover {
   background: #fff;
   color: #6923CC;
   cursor: pointer;
+}
+
+img.g-image {
+  width:100%;
 }
