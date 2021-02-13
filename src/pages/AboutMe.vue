@@ -3,7 +3,7 @@
     <section class="full-height flex-center-all">
       <!--TODO: Learn more -->
       <!--TODO: Better Photo -->
-      <article class="flex space-evenly flex-center-cross">
+      <article class="flex space-evenly align-items-center">
         <div class="image-container">
           <Hexagon :styles="hexStyles" :sizes="hexSizes" :border="hexBorder">
             <img

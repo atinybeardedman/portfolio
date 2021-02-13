@@ -61,7 +61,7 @@ export default {
 
 .modal-container {
     min-width: 50vw;
-    max-width: 90vw;
+    max-width: 1200px;
     background: #eee;
     color: #6923CC;
     border-radius: 4px;
