@@ -17,8 +17,12 @@
           </div>
           <h2>Screenshots</h2>
           <div class="image-container">
-            <g-image :src="$page.project.screenshot1" />
-            <g-image :src="$page.project.screenshot2" />
+            <div class="screenshot">
+              <g-image :src="$page.project.screenshot1" />
+            </div>
+            <div class="screenshot">
+              <g-image :src="$page.project.screenshot2" />
+            </div>
           </div>
           
          
@@ -41,7 +45,7 @@
      screenshot1 (width: 1000, quality: 100)
      screenshot2 (width: 1000, quality: 100)
      tags {
-       id
+       name
      }
 
     }
@@ -53,6 +57,8 @@
 <style scoped>
 .project-detail {
   min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .links {
@@ -67,18 +73,16 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  --multiplier: calc(600px - 100%);
 }
 
-.image-container img {
-  width: 45%;
+.screenshot{
   padding: 1em;
+  min-width: 45%;
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: calc(var(--multiplier) * 999)
 }
 
-@media screen and (max-width:600px) {
 
- .image-container img {
-  width: 90%;
-}
-
-}
 </style>

@@ -1,6 +1,9 @@
 ---
 title: String Art Simulator
-tags: VueJS, Typescript, HTML Canvas
+tags:
+- name: VueJS
+- name: TS
+- name: HTML5
 excerpt: This project provides a simulation for creating string art using modular arithmatic. It was built for my partner (who is a math teacher) to use with her students. 
 demo: https://string-art-simulator.firebaseapp.com/
 repo: https://github.com/atinybeardedman/string-art-simulator

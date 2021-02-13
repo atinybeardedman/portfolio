@@ -1,6 +1,8 @@
 ---
 title: NYS Covid Dashboard
-tags: VueJS, Javascript
+tags: 
+- name: VueJS
+- name: JS
 excerpt: This project provides a dashboard made from New York State Department of Health data to visualize COVID-19 cases. The goal of this project was to provide a better view of the regional data, as most other visualizations only gave information by county.
 demo: https://covid.seandickinson.dev
 repo: https://github.com/atinybeardedman/covid-charts

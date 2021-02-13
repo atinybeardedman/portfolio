@@ -33,10 +33,7 @@
           path
           excerpt
           icon
-          tags {
-            id
-            path
-          }
+          
         }
       }
     }

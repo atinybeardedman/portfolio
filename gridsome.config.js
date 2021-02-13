@@ -14,12 +14,6 @@ module.exports = {
         path: "**/*.md",
         typeName: "Project",
         pathPrefix: '/Solutions',
-        refs: {
-          tags: {
-            typeName: "Tag",
-            create: true,
-          },
-        },
       },
     },
     {
@@ -50,12 +44,6 @@ module.exports = {
       {
         path: "/solutions/:title",
         component: "~/templates/Project.vue",
-      },
-    ],
-    Tag: [
-      {
-        path: "/tag/:title",
-        componenent: "~/templates/Tag.vue",
       },
     ],
   },
