@@ -10,7 +10,7 @@
             target="_blank"
             :href="hex.href"
           >
-            <Hexagon :styles="hexStyles" :border="hexBorder" :sizes="hexSizes">
+            <Hexagon v-bind="hexConfig">
               <font-awesome-icon :icon="hex.icon" size="2x"></font-awesome-icon>
             </Hexagon>
           </a>
@@ -97,17 +97,20 @@ export default {
       ],
       loading: false,
       submitted: false,
-      hexStyles: {
+      hexConfig: {
+        styles: {
         color: "white",
         background: "#6923CC",
-      },
-      hexBorder: {
-        size: '2px',
+        },
+        border: {
+          size: '2px',
         color: "white",
-      },
-      hexSizes: {
-          default: '100px',
+        },
+        sizes: {
+           default: '100px',
           mobile: '75px'
+        },
+        hoverable: true
       },
       hexagons: [
         {

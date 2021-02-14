@@ -1,5 +1,5 @@
 <template>
-    <div class="hex hexagon-container" :style="containerStyles">
+    <div class="hex hexagon-container" :class="{hoverable}" :style="containerStyles">
         <div class="hex hexagon-content flex-center-all">
                 <slot></slot>
         </div>
@@ -10,7 +10,14 @@
 
 <script>
 export default {
-    props: ['styles', 'border', 'sizes'],
+    props: {
+        styles: Object,
+        border: Object,
+        sizes: Object,
+        hoverable: {
+            default: false
+        }
+    },
     computed: {
         containerStyles(){
             const styles = {};
@@ -53,9 +60,9 @@ export default {
 }
 
 
-.hexagon-content:hover {
-    background: inherit !important;
-    color: inherit !important;
+.hexagon-container.hoverable:hover .hexagon-content {
+    color: var(--hexColor);
+    background: var(--fontColor)
 }
 
 @media screen and (max-width: 600px){
