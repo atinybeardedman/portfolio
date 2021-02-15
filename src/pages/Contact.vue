@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="full-height flex-center-all">
-      <div class="container">
+      <div class="container form-wrapper">
         <h2 class="title text-centered">Contact Me</h2>
         <div class="container flex space-evenly">
           <a
@@ -53,7 +53,8 @@
             Submit
           </button>
         </form>
-        <div v-else>Thanks!</div>
+        <div v-else-if="error" class="text-centered">Whoops, something went wrong with that. You can reach out to me directly via email at <a href="mailto:contact@seandickinson.dev">contact@seandickinson.dev</a></div>
+        <div v-else class="text-centered">Thanks for reaching out! I'll be in touch soon.</div>
       </div>
     </section>
   </Layout>
@@ -96,21 +97,22 @@ export default {
         },
       ],
       loading: false,
+      error: false,
       submitted: false,
       hexConfig: {
         styles: {
-        color: "white",
-        background: "#6923CC",
+          color: "white",
+          background: "#6923CC",
         },
         border: {
-          size: '2px',
-        color: "white",
+          size: "2px",
+          color: "white",
         },
         sizes: {
-           default: '100px',
-          mobile: '75px'
+          default: "100px",
+          mobile: "75px",
         },
-        hoverable: true
+        hoverable: true,
       },
       hexagons: [
         {
@@ -130,13 +132,22 @@ export default {
   },
   methods: {
     submitForm(e) {
+      const form = e.target;
       if (this.validateForm()) {
         this.loading = true;
-        // TODO: send real post request
-        setTimeout(() => {
+        const formData = new FormData(form);
+        return fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        }).then(() => {
           this.loading = false;
           this.submitted = true;
-        }, 1000);
+        }).catch(err => {
+          this.loading = false;
+          this.error = true;
+          console.log(err);
+        });
       }
     },
     validateForm() {
@@ -163,9 +174,9 @@ export default {
 </script>
 
 <style scoped>
-form {
+.form-wrapper {
   width: 90vw;
-  max-width: 600px;
+  max-width: 800px;
 }
 .input-wrapper {
   width: 100%;
