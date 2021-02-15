@@ -18,9 +18,11 @@
         <form
           @submit.prevent="submitForm($event)"
           method="post"
-          netlify
+          data-netlify="true"
+          name="contact"
           v-if="!submitted"
         >
+        <input type="hidden" name="form-name" value="contact" />
           <div
             class="input-wrapper"
             v-for="(field, index) in fields"
