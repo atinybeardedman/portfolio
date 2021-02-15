@@ -146,3 +146,14 @@ a:hover {
 img.g-image {
   width:100%;
 }
+
+.md-content figure {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.md-content figcaption {
+  text-align:center;
+  font-size: 0.8em;
+}

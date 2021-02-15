@@ -12,20 +12,9 @@
               >View Code</a
             >
           </div>
-          <div class="content">
+          <div class="md-content">
             <div v-html="$page.project.content"></div>
           </div>
-          <h2>Screenshots</h2>
-          <div class="image-container">
-            <div class="screenshot">
-              <g-image :src="$page.project.screenshot1" />
-            </div>
-            <div class="screenshot">
-              <g-image :src="$page.project.screenshot2" />
-            </div>
-          </div>
-          
-         
         </div>
       </section>
     </article>
@@ -42,8 +31,6 @@
      content
      demo
      repo
-     screenshot1 (width: 1000, quality: 100)
-     screenshot2 (width: 1000, quality: 100)
      tags {
        name
      }
@@ -68,21 +55,5 @@
 .links a {
   margin-right: 1em;
 }
-
-.image-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  --multiplier: calc(600px - 100%);
-}
-
-.screenshot{
-  padding: 1em;
-  min-width: 45%;
-  max-width: 100%;
-  flex-grow: 1;
-  flex-basis: calc(var(--multiplier) * 999)
-}
-
 
 </style>
