@@ -17,7 +17,8 @@
           class="nav-link-container"
           @mouseover="handleHover(link.showSubmenu, index)"
         >
-          <g-link :to="'/' + safeLink(link.link)">{{ link.link }}</g-link>
+          <g-link v-if="!link.download" :to="'/' + safeLink(link.link)">{{ link.link }}</g-link>
+          <a v-else :href="link.href" :download="link.downloadFile">{{link.link}}</a>
         </div>
       </div>
       <!-- Add icon links for github, etc -->
@@ -60,7 +61,7 @@ export default {
           link: "Solutions",
           showSubmenu: true,
         },
-        { link: "Resume" },
+        { link: "Resume", download: true, href: '/resume.pdf', downloadFile:"Sean Dickinson Resume.pdf" },
         { link: "About Me" },
         { link: "Contact" },
       ],
