@@ -44,7 +44,8 @@
 <style scoped>
 .project-detail {
   min-height: 100vh;
-  max-width: 1600px;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
