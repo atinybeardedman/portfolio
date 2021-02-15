@@ -22,5 +22,3 @@ Initially this application was built only for the region where my school is loca
 I built this application using Vue.js as a front-end framework to easily create reusable components accross the site for each of the locations, as well as to more easily handle the routing and state management of the application. The charts are all built using Chart.js, a library which allows for great customization and reactivity. The homepage map is made with linked svg paths that I modified to show the regions used by the state during this time.
 
 ![Fig. 3 - Interactive linked svg map of New York Regions](./map.png)
-
-

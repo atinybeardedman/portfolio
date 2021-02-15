@@ -53,13 +53,15 @@ module.exports = {
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       anchorClassName: "icon icon-link",
       plugins: [
-        "gridsome-remark-figure-caption",
-          {
-            // All the options here are optional
-            figureClassName: "md-figure",
-            imageClassName: "md-figure-image",
-            captionClassName: "md-figure-caption",
-          },
+        [
+          "gridsome-remark-figure-caption",
+            {
+              // All the options here are optional
+              figureClassName: "md-figure",
+              imageClassName: "md-figure-image",
+              captionClassName: "md-figure-caption",
+            },
+        ]
       ],
     },
   },
