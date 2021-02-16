@@ -54,7 +54,7 @@ main {
  padding-left: 200px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   main {
     padding-left: 0;
   }

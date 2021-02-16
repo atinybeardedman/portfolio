@@ -260,7 +260,7 @@ nav {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
   .nav-button {
     display: block;
     visibility: visible;

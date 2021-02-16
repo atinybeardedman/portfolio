@@ -57,4 +57,10 @@
   margin-right: 1em;
 }
 
+@media screen and (max-width:600px){
+  .project-detail {
+    width: 100%;
+  }
+}
+
 </style>
