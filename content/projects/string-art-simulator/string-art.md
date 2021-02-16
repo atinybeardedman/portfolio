@@ -7,8 +7,7 @@ tags:
 excerpt: This project provides a simulation for creating string art using modular arithmatic. It was built for my partner (who is a math teacher) to use with her students. 
 demo: https://string-art-simulator.firebaseapp.com/
 repo: https://github.com/atinybeardedman/string-art-simulator
-screenshot1: ./screenshot-1.png
-screenshot2: ./screenshot-2.png
+tile: ./screenshot-1.png
 icon: fab,connectdevelop
 order: 2
 ---

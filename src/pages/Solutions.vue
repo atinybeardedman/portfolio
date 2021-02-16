@@ -7,7 +7,7 @@
           <g-link v-for="{ node } in $page.projects.edges" :key="node.id" :to="node.path">
             <article class="solution-tile">
               <div class="image-wrapper">
-                <g-image :src="node.screenshot1"></g-image>
+                <g-image :src="node.tile"></g-image>
               </div>
               <div class="description-wrapper flex flex-column space-evenly text-centered">
                 <h3>{{node.title}}</h3>
@@ -32,7 +32,7 @@
         node {
           id
           title
-          screenshot1 (width: 600, quality: 100)
+          tile (width: 400, quality: 100)
           path
           excerpt
           tags {

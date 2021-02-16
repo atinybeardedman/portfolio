@@ -6,8 +6,7 @@ tags:
 excerpt: This project was built as a teaching tool for learning about fractal geometry, although it can be used for other purposes. It was built for my partner (who is a math teacher) to use with her students.
 demo: https://grid-maker-1a221.firebaseapp.com
 repo: https://github.com/atinybeardedman/grid-maker
-screenshot1: ./screenshot-1.jpg
-screenshot2: ./screenshot-2.jpg
+tile: ./tile.jpg
 icon: fas,th
 order: 3
 ---
