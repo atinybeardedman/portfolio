@@ -266,6 +266,10 @@ nav {
     visibility: visible;
   }
 
+  .nav-container {
+    min-height: 40vh;
+  }
+
   .root-menu {
     visibility: hidden;
     background: rgba(43, 15, 82, 0.9);

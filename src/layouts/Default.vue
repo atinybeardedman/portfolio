@@ -58,5 +58,10 @@ main {
   main {
     padding-left: 0;
   }
+  .page-wrapper {
+  background-repeat: no-repeat;
+  background-position: center top, center 80vh;
+  background-size:150% auto, 150% auto;
+}
 }
 </style>
