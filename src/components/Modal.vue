@@ -2,7 +2,7 @@
 <transition name="fade">
     <div @click="close" class="modal flex-center-all" v-show="show">
        <transition name="scale">
-        <div @click.stop class="container modal-container" v-show="show">
+        <div @click.stop class="modal-container" v-show="show">
             <header>
                 <slot name="header"></slot>
             </header>
@@ -61,9 +61,9 @@ export default {
 
 .modal-container {
     min-width: 50vw;
-    max-width: 1200px;
+    max-width: min(1200px, 90vw);
     background: #eee;
-    color: #6923CC;
+    color: var(--accentColor);
     border-radius: 4px;
 }
 

@@ -93,6 +93,8 @@ export default {
 
   .solution-tile {
     margin: 1em;
+    width: min(400px, 70vw);
+    height: calc(min(400px, 70vw) + 2em)
   }
 
   .solution-tile:hover .description-wrapper {
@@ -103,8 +105,8 @@ export default {
   }
 
   .solution-tile .image-wrapper {
-    height: 400px;
-    width: 400px;
+    height: min(400px, 70vw);
+    width: min(400px, 70vw);
   }
 
   .solution-tile .image-wrapper img {
