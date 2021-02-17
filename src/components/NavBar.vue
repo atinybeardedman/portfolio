@@ -61,7 +61,7 @@ export default {
           link: "Solutions",
           showSubmenu: true,
         },
-        { link: "Resume", external: true, href: '/resume.pdf' },
+        { link: "Resume", external: true, href: '/Sean-Dickinson.pdf' },
         { link: "About Me" },
         { link: "Contact" },
       ],
