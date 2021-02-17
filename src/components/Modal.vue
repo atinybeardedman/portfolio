@@ -3,9 +3,9 @@
     <div @click="close" class="modal flex-center-all" v-show="show">
        <transition name="scale">
         <div @click.stop class="modal-container" v-show="show">
-            <header>
-                <slot name="header"></slot>
-            </header>
+            <button @click="close" class="close-button">
+                <span></span><span></span>
+            </button>
             <div class="modal-content">
                 <slot></slot>
             </div>
@@ -62,15 +62,22 @@ export default {
 .modal-container {
     min-width: 50vw;
     max-width: min(1200px, 90vw);
+    max-height: 90vh;
+    overflow-y: scroll;
     background: #eee;
     color: var(--accentColor);
     border-radius: 4px;
+    position: relative;
+}
+
+.modal-content {
+    margin-top: -1em;
 }
 
 .close-button{
-    position: fixed;
+    position: sticky;
     top:1em;
-    left:1em;
+    left:0;
     z-index: 2;
     background: none;
     border: none;
@@ -87,7 +94,7 @@ export default {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #adadad;
   border-radius: 3px;
 }
 
