@@ -3,6 +3,9 @@
     box-sizing:border-box;
   }
 
+:root {
+  --accentColor: #6923CC;
+}
 
   html{
     font-size: 16px;
@@ -105,7 +108,7 @@
 
 a {
   text-decoration: none;
-  color: #6923CC;
+  color: var(--accentColor);
   transition: color 0.5s;
 }
 
@@ -126,7 +129,7 @@ a:hover {
 
 /* CSS Only Components */
   .button {
-    background: #6923CC;
+    background: var(--accentColor);
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -140,7 +143,7 @@ a:hover {
 
 .button:hover {
   background: #fff;
-  color: #6923CC;
+  color: var(--accentColor);
   cursor: pointer;
 }
 

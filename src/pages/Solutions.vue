@@ -1,21 +1,24 @@
 <template>
   <Layout>
   
-      <section class="section full-height">
-        <h1>Solutions</h1>
+      <section class="section full-height flex flex-column flex-center-main">
         <div class="flex space-evenly flex-wrap">
           <g-link v-for="{ node } in $page.projects.edges" :key="node.id" :to="node.path">
             <article class="solution-tile">
-              <div class="image-wrapper">
-                <g-image :src="node.tile"></g-image>
-              </div>
-              <div class="description-wrapper flex flex-column space-evenly text-centered">
-                <h3>{{node.title}}</h3>
-                <div class="flex space-evenly">
-                 <DevIcon v-for="(tag, index) in node.tags" :key="index">
-                   <component :is="getIcon(tag.name)"></component>
-                 </DevIcon>
+              <div class="content">
+                <div class="image-wrapper">
+                  <g-image :src="node.tile"></g-image>
                 </div>
+                <div class="description-wrapper flex flex-column space-evenly text-centered">
+                  <div class="flex space-evenly">
+                  <DevIcon v-for="(tag, index) in node.tags" :key="index">
+                    <component :is="getIcon(tag.name)"></component>
+                  </DevIcon>
+                  </div>
+                </div>
+              </div>
+              <div class="solution-tag text-centered">
+                {{node.title}}
               </div>
             </article>
           </g-link>
@@ -27,7 +30,7 @@
 
 <page-query>
   query {
-    projects: allProject {
+    projects: allProject(sortBy: "order", order: ASC) {
       edges {
         node {
           id
@@ -68,16 +71,13 @@ export default {
     };
     return icons[iconName]
   },
-  // getTagList()
+
   
 }
 }
 </script>
 
 <style>
-  .image-wrapper {
-    margin-bottom: 1em;
-  }
 
   .description-wrapper {
     position: absolute;
@@ -91,6 +91,10 @@ export default {
     transition: opacity 0.3s, visibility 0s 0.3s;
   }
 
+  .solution-tile {
+    margin: 1em;
+  }
+
   .solution-tile:hover .description-wrapper {
     
     opacity: 1;
@@ -98,7 +102,26 @@ export default {
     transition: opacity 0.3s, visibility 0s;
   }
 
-  .solution-tile {
+  .solution-tile .image-wrapper {
+    height: 400px;
+    width: 400px;
+  }
+
+  .solution-tile .image-wrapper img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .solution-tile .content {
     position: relative;
+  }
+
+  .solution-tag {
+    background: var(--accentColor);
+    color: white;
+    height:2em;
+    line-height:2;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 </style>
