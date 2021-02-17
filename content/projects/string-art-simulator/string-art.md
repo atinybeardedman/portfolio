@@ -26,4 +26,4 @@ I wanted to be able to let students choose between a circle and an oval for thei
 ![Fig. 3 - An example string design using 2 different colored strings](./string-2.png)
 
 ## Tech Stack
-I rendered the string art itself on the HTML5 canvas, using Vue.js as my framework to create the reactive UI. I used Bulma's CSS bindings for Vue to style the components and make them responsive and accessible. Due to the number of parameters being passed around and changed, I chose to use Typescript to write my code in class style components for added type safety. The app is front end only hosted on Firebase hosting.
+I rendered the string art itself on the HTML5 canvas, using Vue.js as my framework to create the reactive UI. I used Bulma's CSS bindings for Vue to style the components and make them responsive and accessible. Due to the number of parameters being passed around and changed, I chose to use Typescript to write my code in class style components for added type safety. The app is front end only, hosted on Firebase hosting.
