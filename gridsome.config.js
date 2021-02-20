@@ -37,6 +37,14 @@ module.exports = {
         }
         ],
       }
+    },
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-W6TS8HB',
+        enabled: true,
+        debug: true
+      }
     }
   ],
   templates: {
