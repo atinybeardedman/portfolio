@@ -1,5 +1,5 @@
 <template>
- <div class="page-wrapper" :style="styles" :class="{noScroll: isMenuOpen}">
+ <div class="page-wrapper" :class="{noScroll: isMenuOpen}">
    <NavBar @menuOpened="isMenuOpen = $event" />
    <main>
       <slot/>
@@ -16,8 +16,6 @@ query {
 </static-query>
 
 <script>
-import HexSvg from '@/assets/hexback.svg'
-import HexFadeSvg from "@/assets/hexback-fade.svg"
 import NavBar from "../components/NavBar.vue";
 export default {
   components: {
@@ -25,9 +23,6 @@ export default {
   },
   data() {
   return {
-    styles: {
-      'background-image': `url(${HexSvg}), url(${HexFadeSvg})`
-    },
     isMenuOpen: false
   }
    },
@@ -45,13 +40,21 @@ export default {
 
 .page-wrapper {
   background-repeat: no-repeat;
-  background-position: center -20vh, center 80vh;
-  background-size:100% auto, 100% auto;
+  background-position: center 0px;
+  background-size:100% auto;
+  background-image: url('../assets/background.png');
+  background-attachment: fixed;
 }
-
 
 main {
  padding-left: 200px;
+}
+
+@media screen and (max-width: 1920px) {
+  .page-wrapper{
+    background-image: url('../assets/background@0.5x.png')
+
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -60,8 +63,9 @@ main {
   }
   .page-wrapper {
   background-repeat: no-repeat;
-  background-position: center top, center 80vh;
-  background-size:150% auto, 150% auto;
+  background-position: center top;
+  background-size:150% auto;
+  background-image: url('../assets/background@0.25x.png')
 }
 }
 </style>
