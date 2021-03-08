@@ -40,8 +40,8 @@ export default {
 
 .page-wrapper {
   background-repeat: no-repeat;
-  background-position: center 0px;
-  background-size:100% auto;
+  background-position: center -50vh;
+  background-size:cover;
   background-image: url('../assets/background.png');
   background-attachment: fixed;
 }
@@ -52,6 +52,7 @@ main {
 
 @media screen and (max-width: 1920px) {
   .page-wrapper{
+    background-position: center 0px;
     background-image: url('../assets/background@0.5x.png')
 
   }
@@ -63,8 +64,8 @@ main {
   }
   .page-wrapper {
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size:150% auto;
+  background-position: center 10vh;
+  background-size:cover;
   background-image: url('../assets/background@0.25x.png')
 }
 }
