@@ -10,11 +10,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faConnectdevelop, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faChartBar, faComment, faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons'
-import { faTh} from '@fortawesome/free-solid-svg-icons'
+import { faTh, faCarSide } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false;
-library.add(faGithub, faChartBar, faConnectdevelop, faTh, faComment, faEnvelope, faUser, faLinkedin)
+library.add(faGithub, faChartBar, faConnectdevelop, faTh, faComment, faEnvelope, faUser, faLinkedin, faCarSide)
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component

@@ -43,7 +43,7 @@ module.exports = {
       options: {
         id: 'GTM-W6TS8HB',
         enabled: true,
-        debug: true
+        debug: false
       }
     }
   ],

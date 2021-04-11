@@ -22,7 +22,7 @@
 
 <page-query>
   query {
-    projects: allProject(sortBy: "order", order: ASC) {
+    projects: allProject(sortBy: "order", order: ASC, limit: 3) {
       edges {
         node {
           id
