@@ -11,6 +11,10 @@ tile: ./tile.png
 icon: fas,car-side
 order: 2
 ---
+*Demo Credentials:*
+
+- User: testuser@seandickinson.dev
+- Password: VehicleTest!
 
 ## Motivation
 
