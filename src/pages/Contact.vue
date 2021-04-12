@@ -123,7 +123,7 @@ export default {
         },
         {
           icon: ["fab", "linkedin"],
-          href: "https://www.linkedin.com/in/sean-dickinson-3a32a295/",
+          href: "https://www.linkedin.com/in/sean-r-dickinson/",
         },
         {
           icon: ["far", "envelope"],
