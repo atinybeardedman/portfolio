@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <section class="section full-height flex flex-column flex-center-main">
-      <div class="flex space-evenly flex-wrap">
+    <section class="section full-height flex flex-column flex-center-all">
+      <div class="flex space-evenly flex-wrap max-xl">
         <g-link
           v-for="{ node } in $page.projects.edges"
           :key="node.id"
@@ -43,7 +43,7 @@
         node {
           id
           title
-          tile (width: 400, quality: 100)
+          tile (width: 300, quality: 100)
           path
           excerpt
           tags {
@@ -79,8 +79,8 @@ export default {
 
 .solution-tile {
   margin: 1em;
-  width: min(400px, 70vw);
-  height: calc(min(400px, 70vw) + 2em);
+  width: min(300px, 70vw);
+  height: calc(min(300px, 70vw) + 2em);
 }
 
 .solution-tile:hover .description-wrapper {
@@ -90,8 +90,8 @@ export default {
 }
 
 .solution-tile .image-wrapper {
-  height: min(400px, 70vw);
-  width: min(400px, 70vw);
+  height: min(300px, 70vw);
+  width: min(300px, 70vw);
 }
 
 .solution-tile .image-wrapper img {

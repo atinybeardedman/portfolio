@@ -43,10 +43,6 @@ article:nth-child(even) .card-image{
     justify-content: flex-start;
 }
 
-article:nth-child(even) .card-image svg{
-    width: 1em;
-}
-
 
 .card-text {
     display: flex;
