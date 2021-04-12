@@ -4,7 +4,10 @@
       <section class="section">
         <div class="container">
           <h1 class="title">{{ $page.project.title }}</h1>
-          <div class="links flex flex-space-evenly">
+          <div class="icons flex">
+            <dev-icon class="p-1" v-for="(tag, index) in $page.project.tags" :key="index" :name="tag.name"></dev-icon>
+          </div>
+          <div class="links flex">
             <a :href="$page.project.demo" class="button" target="_blank"
               >Live Demo</a
             >
@@ -39,7 +42,14 @@
   }
 </page-query>
 
-
+<script>
+import DevIcon from "@/components/DevIcon.vue";
+export default {
+  components: {
+    DevIcon,
+  },
+};
+</script>
 
 <style scoped>
 .project-detail {
