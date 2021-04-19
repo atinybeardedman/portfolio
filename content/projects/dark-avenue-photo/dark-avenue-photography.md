@@ -6,7 +6,7 @@ tags:
   - name: Gridsome
 excerpt: A minimalist photography portfolio I built for a friend using the JAMstack. It uses Wordpress as a headless CMS and Gridsome (VueJS) as a static site generator.
 demo: https://www.darkavenuephotography.com
-repo: https://github.com/atinybeardedman/dark-avenue-photography
+repo: https://github.com/atinybeardedman/dark-avenue-photo
 tile: ./tile.png
 icon: fas,camera-retro
 order: 3
