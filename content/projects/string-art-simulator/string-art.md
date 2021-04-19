@@ -9,7 +9,7 @@ demo: https://string-art-simulator.firebaseapp.com/
 repo: https://github.com/atinybeardedman/string-art-simulator
 tile: ./tile.png
 icon: fab,connectdevelop
-order: 3
+order: 4
 ---
 ## Motivation
 Combining art with math and science is a growing trend in education sometimes referred to as STEAM. This simulation grew out of a unit in which my partner teaches her students about modular division and its various applications. 

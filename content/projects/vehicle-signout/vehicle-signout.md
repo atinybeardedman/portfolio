@@ -4,7 +4,7 @@ tags:
   - name: Angular
   - name: TS
   - name: Firebase
-excerpt: This project is a real-time sign out application made to handle the sharing of vehicles on a school campus. This project was made for the school I work at to replace the paper sign out sheet and to better allow visibility and tracking of the use of the shared vehicles.
+excerpt: A real-time sign out application made to handle the sharing of vehicles on a school campus. This project was made for the school I work at to replace the paper sign out sheet and to better allow visibility and tracking of the use of the shared vehicles.
 demo: https://vehicle-signout.web.app/
 repo: https://github.com/atinybeardedman/vehicle-signout
 tile: ./tile.png

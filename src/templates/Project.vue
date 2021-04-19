@@ -59,9 +59,6 @@ export default {
   margin: 0 auto;
 }
 
-.links {
-  padding: 2rem 0;
-}
 
 .links a {
   margin-right: 1em;

@@ -8,7 +8,7 @@ demo: https://grid-maker-1a221.firebaseapp.com
 repo: https://github.com/atinybeardedman/grid-maker
 tile: ./tile.jpg
 icon: fas,th
-order: 4
+order: 5
 ---
 ## Motivation
 Fractal geometry is a relatively new field of mathematics that is not traditionally taught in high school classrooms. Due to this fact, there aren't many tools out there for teachers to use who want to explore this topic with younger students. My partner is a high school teacher who is lucky enough to teach a course that includes fractals and she was looking for an easy way for students to be able to manually explore the concepts of iteration, self similarity, and fractal dimension. Together we worked to design this application that would serve as an important learning tool for her students.
