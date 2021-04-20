@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="section full-height flex flex-column flex-center-all">
-      <div class="flex space-evenly flex-wrap max-xl">
+      <div class="solution-grid">
         <g-link
           v-for="{ node } in $page.projects.edges"
           :key="node.id"
@@ -78,7 +78,7 @@ export default {
 }
 
 .solution-tile {
-  margin: 1em;
+  margin: 0 auto;
   width: min(300px, 70vw);
   height: calc(min(300px, 70vw) + 2em);
 }
@@ -110,5 +110,13 @@ export default {
   line-height: 2;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  width: 90%;
+  max-width: 1800px;
 }
 </style>
