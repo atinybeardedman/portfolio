@@ -13,7 +13,7 @@ order: 3
 ---
 
 ## Motivation
-A friend approached me about creating a simple website where he could feature his photography. He was most interested in creating a minimalist layout that focused on each photo individually.His second concern was about keeping costs down for the actual hosting of the site, while still being able to update it himself. I immediately thought of the JAMstack approach that would allow the best of both worlds: creating a static website that could be hosted for free, while also allowing easy content editing by using a CMS like Wordpress as a backend.
+A friend approached me about creating a simple website where he could feature his photography. He was most interested in creating a minimalist layout that focused on each photo individually. His second concern was about keeping costs down for the actual hosting of the site, while still being able to update it himself. I immediately thought of the JAMstack approach that would allow the best of both worlds: creating a static website that could be hosted for free, while also allowing easy content editing by using a CMS like Wordpress as a backend.
 
 ![Fig. 1 - Landing Page of Dark Avenue Photography](./screen-1.png) 
 
@@ -22,7 +22,7 @@ Creating a photo blog like this one requires some important choices regarding ho
 
 ![Fig. 2 - Category page on Dark Avenue Photography](./screen-2.png) 
 
-Wordpress generates different sized images by default when handling uploads, which means that the end user doesn't need to manually create these different images. I created a Vue component to use these sized images for this very purpose. The component also correctly sizes the image to best fit into the viewport depending on its layout (landscape or portrait).
+Wordpress generates different sized images by default when handling uploads, which means that the end user doesn't need to manually create these different images. I created a Vue component to use these sized images for this very purpose. The component also correctly sizes the image to best fit into the viewport depending on its layout (landscape or portrait), so as to keep the user focused on one or 2 photos at a time while maintaining the aspect ratio and full content of each.
 
 ![Fig. 3 - Portrait image correctly filling the browser](./screen-3.png) 
 
