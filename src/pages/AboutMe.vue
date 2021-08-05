@@ -22,8 +22,7 @@
             </p>
             <p>
               When I'm not coding you might find me in my woodshop working on a
-              new project, reading a good book, or spending time outside with my
-              chickens and ducks.
+              new project, reading a good book, or hiking a new trail.
             </p>
           </div>
           <button @click="showModal = true" class="button">Learn More</button>
@@ -35,7 +34,7 @@
         <h2>My Background</h2>
         I studied to become an educator, specifically a Chemistry teacher,
         because I enjoyed teaching and solving problems. Once I began teaching
-        it became clear that there were problems that my school was having that
+        it became clear that there were problems that the school I worked at was having that
         could be solved using code, and so I offered to create some customized
         applications to address these problems. Along the way I found just how
         much I enjoyed coding solutions to complex problems and now am looking
